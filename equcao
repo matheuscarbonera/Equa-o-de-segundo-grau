@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+void equacao2(){
+	float a, b, c;
+	printf("Informar o valor de A: ");
+	scanf("%f", &a);
+	printf("Informar o valor de B: ");
+	scanf("%f", &b);
+	printf("Informar o valor de C: ");
+	scanf("%f", &c);
+	float delta, raiz, y1, y2;
+	
+	delta = (pow(b,2)-(4*a*c));
+	raiz = sqrt(delta);
+	y1 = ((-b+raiz)/(2*a));
+	y2 = ((-b-raiz)/(2*a));
+	
+	
+	if(delta < 0){
+		printf("A Equacao nao possui raizes reais\n");
+	}
+	  else if(delta == 0){
+		  printf("A Raiz e y=%.2f\n", y1);
+	  }
+	    else{
+		    printf("y¹=%.2f\ny²=%.2f\n", y1, y2);}
+	
+	
+}
+
+int main(int argc, char *argv[]) {
+	equacao2();
+	
+	
+	return 0;
+}
